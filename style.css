@@ -1,0 +1,204 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    line-height: 1.5;
+}
+p {
+    color: #999;
+    letter-spacing: 1px;
+}
+h2 {
+    font-size: 50px;
+    text-align: center;
+}
+
+/* --------Welcome------- */
+.header {
+    height: 100vh;
+    background-image: url(img/1.jpg);
+    background-position: center;
+    color: white;
+}
+#logo {
+    float: left;
+    margin-left: 50px;
+}
+.header .nav {
+    float: right;
+    margin-right: 50px;
+}
+.header .nav ul {
+    display: flex;
+}
+.header .nav li {
+    list-style-type: none;
+    margin: 16px 5px;
+}
+.header .nav a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+}
+.header .nav a:hover {
+    color: black;
+    background-color: white;
+}
+#main-header {    
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+#main-header h2 {
+    margin-bottom: 10px;
+}
+#main-header p {
+    width: 70%;
+    margin: 0 auto;
+    color: white;
+    text-align: center;
+}
+#main-header a {
+    border: solid 2px white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 40px;
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+}
+#label-list {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    padding: 0;
+}
+#label-list ul {
+    display: flex;
+    padding: 0px;
+}
+#label-list .label {
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 8px;
+    display: block;
+    opacity: 0.7;
+}
+/* --------Welcome------- */
+#welcome {
+    padding: 100px 10%;
+}
+#welcome h2 {
+    margin: 0;
+    text-align: center;
+}
+#welcome p {
+    text-align: center;
+    margin: 50px 10%;
+    letter-spacing: 1px;
+    color: #999;
+}
+#welcome img {
+    display: block;
+    margin: auto;
+    width: 100%;
+}
+
+/* --------What-we-do------- */
+#what-we-do {
+    border: 2px solix green;
+    padding: 100px;
+    padding-top: 0;
+}
+#what-we-do h2 {
+    text-align: center;
+    margin: 40px auto;
+}
+#what-we-do h3 {
+    text-align: center;
+}
+#what-we-do p {
+    text-align: center;
+}
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.card {
+    width: 25%;
+    padding: 20px;
+}
+.card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+    margin-top: 30px;
+}
+
+/* --------Statistics------- */
+#statistics {
+    background-image: url(img/bg.jpg);
+    padding: 50px;
+}
+#statistics h2 {
+    color: white;
+}
+#statistics p {
+    color: white;
+    margin: 0;
+}
+.bnum {
+    font-size: 70px;
+}
+
+/* --------Services------- */
+#services {
+    padding: 100px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    background-color: #f8f9fa;
+}
+#services h3 {
+    font-size: 30px;
+}
+#services #left {
+    width: 90%;
+    float: left;
+    padding: 0 50px;
+}
+#services #left p {
+    line-height: 2.5;
+}
+#services #right {
+    display: grid;
+    grid-template-columns: 49% 49%;
+    grid-template-rows: 49% 49%;
+    justify-content: space-around;
+    align-content: space-around;
+}
+#services .item {
+    padding: 45px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 0 10px 10px 0;
+    box-shadow: 7px 7px 10px 0 rgb(76 110 245 / 10%);
+    background-color: #fff;
+}
+#services .item i {
+    font-size: 50px;
+    color: #ff9900;
+}
+
