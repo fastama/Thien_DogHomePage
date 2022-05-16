@@ -159,6 +159,7 @@ h2 {
 #statistics p {
     color: white;
     margin: 0;
+    text-align: center;
 }
 .bnum {
     font-size: 70px;
