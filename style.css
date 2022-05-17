@@ -213,6 +213,7 @@ h2 {
     padding: 45px;
     color: white;
     background-image: url(img/bg.jpg);
+    background-repeat: no-repeat;
     background-size: cover;
 }
 #testimonials .container {
@@ -222,9 +223,6 @@ h2 {
 }
 #testimonials .container .card {
     text-align: center;
-    /* display: flex; */
-    justify-content: flex-end;
-    flex-wrap: wrap;
     width: 29%;
 }
 #testimonials p {
