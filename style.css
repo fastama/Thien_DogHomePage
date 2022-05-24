@@ -24,6 +24,7 @@ h2 {
   color: white;
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
 }
 #logo {
   float: left;
@@ -35,21 +36,46 @@ h2 {
 }
 .header .nav ul {
   display: flex;
+  padding: 0;
 }
+.nav label {
+  display: none;
+}
+.nav input {
+  display: none;
+}
+
 .header .nav li {
+  position: relative;
   list-style-type: none;
   margin: 16px 5px;
-}
-.header .nav a {
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  border-radius: 5px;
   color: white;
 }
-.header .nav a:hover {
+.header .nav a {
+  color: white;
+  display: block;
+  text-decoration: none;
+  padding: 16px;
+  border-radius: 5px;
+}
+.header .nav li:hover > a {
   color: black;
   background-color: white;
+}
+.nav li.drop-down ul {
+  display: none;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+.nav li.drop-down {
+  position: relative;
+}
+.nav li.drop-down li {
+  margin: 0;
+  width: 100%;
+}
+.nav li.drop-down:hover ul {
+  display: block;
+  width: 100%;
 }
 #main-header {
   text-align: center;
@@ -64,9 +90,10 @@ h2 {
   margin-bottom: 10px;
 }
 #main-header p {
-  width: 70%;
+  width: 100%;
   margin: 0 auto;
   color: white;
+  letter-spacing: 1px;
   text-align: center;
 }
 #main-header a {
@@ -78,6 +105,7 @@ h2 {
   text-decoration: none;
   color: white;
 }
+/* ---label-dot--- */
 #label-list {
   position: absolute;
   left: 50%;
@@ -96,6 +124,66 @@ h2 {
   margin: 0 8px;
   display: block;
   opacity: 0.7;
+}
+@media only screen and (max-width: 992px) {
+  .header .nav ul {
+    flex-direction: column;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    z-index: 2;
+  }
+  .header .nav > label {
+    display: block;
+    background-color: #fff;
+    color: black;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+  }
+  .nav li.drop-down ul {
+    display: none;
+  }
+  .nav li.drop-down label {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 2;
+  }
+  .header input#toggle-menu ~ ul {
+    display: none;
+  }
+  .header input#toggle-menu:checked ~ ul {
+    display: flex;
+  }
+  .header input#toggle-2 ~ ul {
+    display: none;
+    position: relative;
+    margin-top: 0;
+  }
+  .header input#toggle-2:checked ~ ul {
+    display: block;
+    margin: 16px 0;
+  }
+  .header .nav li {
+    margin: 0 5px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #main-header {
+    width: 90%;
+  }
+  #main-header h2 {
+    font-size: 25px;
+    margin-bottom: 10px;
+  }
 }
 /* --------Welcome------- */
 #welcome {
@@ -149,6 +237,20 @@ h2 {
   display: block;
   margin-top: 30px;
 }
+@media only screen and (max-width: 992px) {
+  .card {
+    width: 50%;
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #what-we-do {
+    padding: 10px;
+  }
+  .card {
+    width: 100%;
+  }
+}
 
 /* --------Statistics------- */
 #statistics {
@@ -167,6 +269,22 @@ h2 {
 }
 .bnum {
   font-size: 70px;
+}
+@media only screen and (max-width: 992px) {
+  .bnum {
+    font-size: 50px;
+  }
+  #statistics .card {
+    padding: 0 0 20px;
+  }
+  #statistics .card-container {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #statistics {
+    padding: 10px;
+  }
 }
 
 /* --------Services------- */
@@ -207,6 +325,57 @@ h2 {
   font-size: 50px;
   color: #ff9900;
 }
+@media only screen and (max-width: 992px) {
+  #services {
+    padding: 20px 10px 100px 0;
+    grid-template-columns: 38% 62%;
+  }
+  #services #left {
+    padding: 0 20px;
+    width: 100%;
+  }
+  #services #left h2 {
+    margin-top: 0;
+    font-size: 40px;
+    text-align: left;
+  }
+  #services #right {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40% 40%;
+    align-content: center;
+  }
+  #services .item {
+    padding: 20px;
+    margin-right: 2%;
+    margin-bottom: 3%;
+  }
+  #services h3 {
+    font-size: 22px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  #services .item i {
+    font-size: 30px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #services {
+    grid-template-columns: 100%;
+    padding: 25px 10px;
+  }
+  #services #left h2 {
+    font-size: 30px;
+  }
+  #services #right {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 25% 25% 25% 25%;
+    padding: 20px;
+  }
+  #services .item {
+    margin-right: 0;
+  }
+}
 
 /* --------Testimonials------- */
 #testimonials {
@@ -241,7 +410,29 @@ h2 {
   padding: 10px;
   text-align: right;
 }
-
+@media only screen and (max-width: 992px) {
+  #testimonials .container {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #testimonials {
+    padding: 20px;
+  }
+  #testimonials h2 {
+    font-size: 35px;
+  }
+  #testimonials h3 {
+    margin-right: 100px;
+  }
+  #testimonials .container {
+    flex-wrap: wrap;
+  }
+  #testimonials .container .card {
+    text-align: center;
+    width: 100%;
+  }
+}
 /* --------Our Blog------- */
 #ourblog {
   padding: 100px;
@@ -285,7 +476,23 @@ h2 {
   color: #ff9900;
   text-decoration: none;
 }
-
+@media only screen and (max-width: 992px) {
+  #ourblog {
+    padding: 60px 10px 70px 10px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #ourblog {
+    padding: 60px 20px 40px 20px;
+  }
+  #ourblog .container {
+    flex-wrap: wrap;
+  }
+  #ourblog .container .item {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+}
 /* --------Map------- */
 #map {
   width: 100%;
@@ -364,6 +571,31 @@ h2 {
   font-size: 16px;
   cursor: pointer;
 }
+@media only screen and (max-width: 992px) {
+  #contact {
+    padding: 40px 30px;
+  }
+  #contact .container {
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #contact {
+    padding: 40px 20px;
+  }
+  #contact h2 {
+    font-size: 40px;
+  }
+  #contact .container {
+    flex-wrap: wrap;
+  }
+  #contact .container .left {
+    width: 100%;
+  }
+  #contact .container .right {
+    width: 100%;
+  }
+}
 /* --------Footer------- */
 #footer {
   /* width: 100%; */
@@ -432,4 +664,43 @@ a#gg {
 }
 #footer .container .item:last-child {
   width: 25%;
+}
+@media only screen and (max-width: 992px) {
+  #footer {
+    padding: 30px 20px;
+    background-color: #272729;
+  }
+  #footer .container .item {
+    width: 14%;
+  }
+  #footer .container .item:last-child {
+    width: 35%;
+  }
+  #footer p {
+    font-size: 0.9em;
+  }
+}
+@media only screen and (max-width: 576px) {
+  #footer {
+    padding: 30px 20px;
+    background-color: #272729;
+  }
+  #footer .container {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  #footer .container .item {
+    width: 100%;
+  }
+  #footer .container .item:last-child {
+    width: 100%;
+  }
+  #footer .container .item:nth-child(1),
+  #footer .container .item:nth-child(2) {
+    width: 45%;
+    margin-right: 20px;
+  }
+  #footer input {
+    padding: 13px 50px 13px 15px;
+  }
 }
