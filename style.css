@@ -665,7 +665,7 @@ a#gg {
 #footer .container .item:last-child {
   width: 25%;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1400px) {
   #footer {
     padding: 30px 20px;
     background-color: #272729;
