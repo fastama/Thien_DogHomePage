@@ -1,4 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;700&family=Poppins:wght@100;400;500;700&display=swap");
+:root {
+  --color-white: #fff;
+  --color-gray: #999;
+  --color-input: #555;
+  --color-black: #000;
+  --color-light-gray: #f8f9fa;
+  --color-green: green;
+  --color-orange: #ff9900;
+  --color-submit: #fdb54b;
+  --color-form: #f7f7f7;
+  --color-input-form: #e6e6e6;
+  --color-footer: #17181b;
+  --color-footer-1400: #272729;
+  --color-footer-p: #727377;
+  --color-footer-btn: #c57600;
+  --color-bg-fb: #3b5998;
+  --color-bg-tw: #1da1f2;
+  --color-bg-drib: #ea4c89;
+  --color-bg-gg: #f44336;
+}
 * {
   box-sizing: border-box;
 }
@@ -9,7 +29,7 @@ body {
   line-height: 1.5;
 }
 p {
-  color: #999;
+  color: var(--color-gray);
   letter-spacing: 1px;
 }
 h2 {
@@ -22,7 +42,7 @@ h2 {
   height: 100vh;
   background-image: url(img/1.jpg);
   background-position: center;
-  color: white;
+  color: var(--color-white);
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -50,22 +70,22 @@ h2 {
   position: relative;
   list-style-type: none;
   margin: 16px 5px;
-  color: white;
+  color: var(--color-white);
 }
 .header .nav a {
-  color: white;
+  color: var(--color-white);
   display: block;
   text-decoration: none;
   padding: 16px;
   border-radius: 5px;
 }
 .header .nav li:hover > a {
-  color: black;
-  background-color: white;
+  color: var(--color-black);
+  background-color: var(--color-white);
 }
 .nav li.drop-down ul {
   display: none;
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(var(--color-black), 0.8);
 }
 .nav li.drop-down {
   position: relative;
@@ -85,7 +105,7 @@ h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
-  color: white;
+  color: var(--color-white);
 }
 #main-header h2 {
   margin-bottom: 10px;
@@ -93,18 +113,18 @@ h2 {
 #main-header p {
   width: 100%;
   margin: 0 auto;
-  color: white;
+  color: var(--color-white);
   letter-spacing: 1px;
   text-align: center;
 }
 #main-header a {
-  border: solid 2px white;
+  border: solid 2px var(--color-white);
   padding: 10px;
   border-radius: 5px;
   margin-top: 40px;
   display: inline-block;
   text-decoration: none;
-  color: white;
+  color: var(--color-white);
 }
 /* ---label-dot--- */
 #label-list {
@@ -120,7 +140,7 @@ h2 {
 }
 #label-list .label {
   padding: 5px;
-  background-color: #fff;
+  background-color: var(--color-white);
   border-radius: 50%;
   margin: 0 8px;
   display: block;
@@ -130,7 +150,7 @@ h2 {
   .header .nav ul {
     flex-direction: column;
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(var(--color-black), 0.8);
     padding: 0;
     left: 50%;
     transform: translateX(-50%);
@@ -140,8 +160,8 @@ h2 {
   }
   .header .nav > label {
     display: block;
-    background-color: #fff;
-    color: black;
+    background-color: var(--color-white);
+    color: var(--color-black);
     margin-top: 20px;
     padding: 15px;
     border-radius: 5px;
@@ -198,7 +218,7 @@ h2 {
   text-align: center;
   margin: 50px 10%;
   letter-spacing: 1px;
-  color: #999;
+  color: var(--color-gray);
 }
 #welcome img {
   display: block;
@@ -208,7 +228,7 @@ h2 {
 
 /* --------What-we-do------- */
 #what-we-do {
-  border: 2px solix green;
+  border: 2px solix var(--color-green);
   padding: 100px;
   padding-top: 0;
 }
@@ -261,10 +281,10 @@ h2 {
   background-size: cover;
 }
 #statistics h2 {
-  color: white;
+  color: var(--color-white);
 }
 #statistics p {
-  color: white;
+  color: var(--color-white);
   margin: 0;
   text-align: center;
 }
@@ -293,7 +313,7 @@ h2 {
   padding: 100px;
   display: grid;
   grid-template-columns: 40% 60%;
-  background-color: #f8f9fa;
+  background-color: var(--color-light-gray);
 }
 #services h3 {
   font-size: 32px;
@@ -320,11 +340,11 @@ h2 {
   border-radius: 4px;
   margin: 0 10px 10px 0;
   box-shadow: 7px 7px 10px 0 rgb(76 110 245 / 10%);
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 #services .item i {
   font-size: 50px;
-  color: #ff9900;
+  color: var(--color-orange);
 }
 @media only screen and (max-width: 992px) {
   #services {
@@ -381,7 +401,7 @@ h2 {
 /* --------Testimonials------- */
 #testimonials {
   padding: 45px;
-  color: white;
+  color: var(--color-white);
   background-image: url(img/bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -396,7 +416,7 @@ h2 {
   width: 29%;
 }
 #testimonials p {
-  color: white;
+  color: var(--color-white);
 }
 #testimonials .container .card img {
   width: 100px;
@@ -404,7 +424,7 @@ h2 {
 }
 #testimonials h3 {
   font-size: 18px;
-  color: #ff9900;
+  color: var(--color-orange);
   letter-spacing: 1px;
   text-transform: uppercase;
   font-weight: 600;
@@ -464,17 +484,17 @@ h2 {
   text-decoration: none;
   font-size: 20px;
   font-weight: 400;
-  color: black;
+  color: var(--color-black);
 }
 #ourblog a.btn-orange {
   font-size: 16px;
-  color: #ff9900;
+  color: var(--color-orange);
   text-decoration: none;
   font-weight: 600;
 }
 #ourblog p.btn-orange {
   font-size: 16px;
-  color: #ff9900;
+  color: var(--color-orange);
   text-decoration: none;
 }
 @media only screen and (max-width: 992px) {
@@ -513,7 +533,7 @@ h2 {
 #contact h3 {
   font-weight: inherit;
   text-align: left;
-  color: #ff9900;
+  color: var(--color-orange);
   font-size: 30px;
   margin-top: 0;
 }
@@ -539,7 +559,7 @@ h2 {
 #contact .container .right {
   width: 50%;
   padding: 32px;
-  background-color: #f7f7f7;
+  background-color: var(--color-form);
   border-radius: 5px;
   box-shadow: 7px 7px 10px 0 rgb(56 56 56 / 21%);
 }
@@ -547,28 +567,28 @@ h2 {
   outline: none;
   padding: 15px;
   font-size: 16px;
-  color: #555;
+  color: var(--color-input);
   width: 100%;
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--color-input-form);
   margin-bottom: 15px;
 }
 #contact textarea {
   padding: 15px;
   min-height: 180px;
   font-size: 16px;
-  color: #555;
+  color: var(--color-input);
   width: 100%;
   resize: none;
-  border: 1px solid #e6e6e6;
+  border: 1px solid var(--color-input-form);
   font-family: inherit;
 }
 #contact .btn-submit {
   width: 100%;
   padding: 15px;
-  background-color: #fdb54b;
+  background-color: var(--color-submit);
   border: none;
   border-radius: 5px;
-  color: #fff;
+  color: var(--color-white);
   font-size: 16px;
   cursor: pointer;
 }
@@ -601,10 +621,10 @@ h2 {
 #footer {
   /* width: 100%; */
   padding: 50px 80px;
-  background-color: #17181b;
+  background-color: var(--color-footer);
 }
 #footer h3 {
-  color: #fff;
+  color: var(--color-white);
   font-size: 22px;
   font-weight: 500;
   text-transform: uppercase;
@@ -613,11 +633,11 @@ h2 {
   font-weight: inherit;
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: var(--color-white);
 }
 #footer p {
   font-size: 15px;
-  color: #727377;
+  color: var(--color-footer-p);
   letter-spacing: 1px;
   font-weight: inherit;
   margin: 10px 0px 20px 0px;
@@ -629,9 +649,9 @@ h2 {
 #footer button {
   padding: 15px 20px;
   font-size: 15px;
-  color: #fff;
+  color: var(--color-white);
   margin-left: -5px;
-  background-color: #c57600;
+  background-color: var(--color-footer-btn);
   border: none;
 }
 #footer .item a {
@@ -642,19 +662,19 @@ h2 {
   height: 36px;
   text-decoration: none;
   margin-right: 10px;
-  color: white;
+  color: var(--color-white);
 }
 a#fb {
-  background-color: #3b5998;
+  background-color: var(--color-bg-fb);
 }
 a#twitter {
-  background-color: #1da1f2;
+  background-color: var(--color-bg-tw);
 }
 a#drib {
-  background-color: #ea4c89;
+  background-color: var(--color-bg-drib);
 }
 a#gg {
-  background-color: #f44336;
+  background-color: var(--color-bg-gg);
 }
 #footer .container {
   display: flex;
@@ -669,7 +689,7 @@ a#gg {
 @media only screen and (max-width: 1400px) {
   #footer {
     padding: 30px 20px;
-    background-color: #272729;
+    background-color: var(--color-footer-1400);
   }
   #footer .container .item {
     width: 14%;
@@ -684,7 +704,7 @@ a#gg {
 @media only screen and (max-width: 576px) {
   #footer {
     padding: 30px 20px;
-    background-color: #272729;
+    background-color: var(--color-footer-1400);
   }
   #footer .container {
     flex-wrap: wrap;
